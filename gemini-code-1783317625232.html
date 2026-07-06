@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyên Đề So Sánh Nâng Cao - Ms Lê Hằng English</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes floatPattern {
+            0% { background-position: 0 0, 0 0; }
+            100% { background-position: 100px 100px, 50px 50px; }
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(-45deg, #6C5CE7, #FF7675, #00CEC9, #FDCB6E);
+            background-size: 400% 400%;
+            animation: gradientBG 12s ease infinite;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 0;
+            opacity: 0.15;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M9 26c1.2 0 2.1-.4 2.8-1.2.8-.7 1.2-1.7 1.2-2.8 0-1.2-.4-2.1-1.2-2.8C11.1 18.4 10.2 18 9 18c-1.2 0-2.1.4-2.8 1.2-.8.7-1.2 1.7-1.2 2.8 0 1.2.4 2.1 1.2 2.8C6.9 25.6 7.8 26 9 26zm30 0c1.2 0 2.1-.4 2.8-1.2.8-.7 1.2-1.7 1.2-2.8 0-1.2-.4-2.1-1.2-2.8-.7-.8-1.7-1.2-2.8-1.2-1.2 0-2.1.4-2.8 1.2-.8.7-1.2 1.7-1.2 2.8 0 1.2.4 2.1 1.2 2.8.7.8 1.7 1.2 2.8 1.2zM24 48c1.2 0 2.1-.4 2.8-1.2.8-.7 1.2-1.7 1.2-2.8 0-1.2-.4-2.1-1.2-2.8-.7-.8-1.7-1.2-2.8-1.2-1.2 0-2.1.4-2.8 1.2-.8.7-1.2 1.7-1.2 2.8 0 1.2.4 2.1 1.2 2.8.7.8 1.7 1.2 2.8 1.2z' fill='%23ffffff' fill-opacity='0.8' fill-rule='evenodd'/%3E%3C/svg%3E"), 
+                            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23ffffff' fill-opacity='0.6'%3E%3Cpath d='M10 15h4v4h-4zm20 30h4v4h-4zm40-20h4v4h-4zM20 70h4v4h-4z'/%3E%3Cpath d='M9.5 10.5l3 3m-3 0l3-3m57.5 17.5l3 3m-3 0l3-3M26.5 42.5l3 3m-3 0l3-3' stroke='%23fff' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E");
+            animation: floatPattern 25s linear infinite;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            z-index: 1;
+            position: relative;
+        }
+
+        .header-panel {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px;
+            border-radius: 18px;
+            box-shadow: 0 6px 0 rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            border: 3px solid #6C5CE7;
+        }
+
+        .header-panel h1 {
+            font-size: 15pt;
+            color: #6C5CE7;
+            margin: 0;
+            font-weight: 900;
+        }
+
+        .alert-box {
+            background-color: #FFF3CD;
+            border: 3px solid #FFEBAA;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 0 #E6B800;
+            text-align: center;
+            color: #856404;
+        }
+
+        .alert-box h2 {
+            margin: 0 0 8px 0;
+            font-size: 13pt;
+            font-weight: 900;
+            color: #D35400;
+        }
+
+        .alert-box p {
+            margin: 5px 0;
+            font-size: 10.5pt;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 22px;
+            padding: 22px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 0 rgba(0, 0, 0, 0.06);
+            border: 3px solid #F1F2F6;
+            transition: transform 0.3s ease;
+        }
+
+        .question-text {
+            font-size: 11.5pt;
+            color: #2C3E50;
+            font-weight: 700;
+            margin-bottom: 18px;
+            line-height: 1.6;
+        }
+
+        .options-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .option-btn {
+            display: block;
+            width: 100%;
+            background: #FFFFFF;
+            border: 3px solid #E4E7EB;
+            border-radius: 15px;
+            padding: 12px 18px;
+            font-size: 11pt;
+            font-weight: 700;
+            color: #4A5568;
+            text-align: left;
+            cursor: pointer;
+            box-shadow: 0 4px 0 #E4E7EB;
+            transition: transform 0.1s ease, box-shadow 0.1s ease;
+        }
+
+        .option-btn:hover {
+            transform: translateY(-2px) scale(1.01);
+            box-shadow: 0 6px 0 #E4E7EB;
+            background-color: #F8FAFC;
+        }
+
+        .option-btn.correct {
+            background-color: #00D26A !important;
+            border-color: #00A855 !important;
+            color: white !important;
+            box-shadow: 0 4px 0 #00A855 !important;
+        }
+
+        .option-btn.wrong {
+            background-color: #FF4757 !important;
+            border-color: #D63031 !important;
+            color: white !important;
+            box-shadow: 0 4px 0 #D63031 !important;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-6px); }
+            40%, 80% { transform: translateX(6px); }
+        }
+
+        .shake-animation {
+            animation: shake 0.4s ease-in-out;
+        }
+
+        .explanation-box {
+            display: none;
+            margin-top: 15px;
+            background: #F8FAFC;
+            border-left: 6px solid #00CEC9;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .explanation-title {
+            font-weight: 900;
+            color: #00CEC9;
+            margin-bottom: 8px;
+            font-size: 11pt;
+        }
+
+        .explanation-step {
+            font-size: 10pt;
+            color: #4A5568;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+        
+        .explanation-step strong {
+            color: #2D3748;
+        }
+
+        .submit-container {
+            text-align: center;
+            margin: 35px 0 50px 0;
+        }
+
+        .btn-submit {
+            background: #FDCB6E;
+            color: #2C3E50;
+            font-size: 14pt;
+            font-weight: 900;
+            padding: 12px 45px;
+            border: 4px solid #E6A115;
+            border-radius: 22px;
+            cursor: pointer;
+            box-shadow: 0 6px 0 #E6A115;
+            transition: all 0.1s;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 0 #E6A115;
+        }
+
+        .modal-result {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-result-content {
+            background: white;
+            border-radius: 25px;
+            padding: 25px;
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+            border: 4px solid #00CEC9;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .modal-score {
+            font-size: 28pt;
+            font-weight: 900;
+            color: #00CEC9;
+            margin: 12px 0;
+        }
+
+        .modal-comment {
+            font-size: 11.5pt;
+            font-weight: 700;
+            color: #4A5568;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .modal-close-btn {
+            background: #00CEC9;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            font-size: 11pt;
+            font-weight: 900;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 4px 0 #009E9B;
+        }
+
+        #confetti-canvas {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <div class="container">
+        <div class="header-panel">
+            <h1>Giáo viên hướng dẫn: Ms Lê Hằng English</h1>
+        </div>
+
+        <div class="alert-box">
+            <h2>🎯 THỬ THÁCH CHUYÊN ĐỀ SO SÁNH NÂNG CAO (50 CÂU) 🎯</h2>
+            <p>Bộ câu hỏi trích từ đề thi Đánh giá năng lực HSA. Con hãy làm bài tập trung và đọc kỹ giải thích 4 bước để lấy trọn điểm cấu trúc so sánh nhé!</p>
+        </div>
+
+        <div id="quiz-container"></div>
+
+        <div class="submit-container">
+            <button class="btn-submit" onclick="submitQuiz()">NỘP BÀI XEM ĐIỂM SỐ</button>
+        </div>
+    </div>
+
+    <div class="modal-result" id="result-modal">
+        <div class="modal-result-content">
+            <div style="font-size: 35pt;">🎯</div>
+            <div style="font-weight: 900; font-size: 15pt; color: #2C3E50;">KẾT QUẢ BÀI LÀM CỦA CON</div>
+            <div class="modal-score" id="modal-score-text">0/0</div>
+            <div class="modal-comment" id="modal-comment-text">Lời nhận xét từ cô...</div>
+            <div class="modal-buttons">
+                <button class="modal-close-btn" onclick="closeModal()">ĐÓNG ĐỂ XEM LẠI BÀI</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const quizData = [
+            {
+                id: 1,
+                question: "The more I study for the upcoming entrance exam, _______ I feel about my personal chances of achieving a high score.",
+                options: [{key:"A",text:"the most confident"},{key:"B",text:"the more confident"},{key:"C",text:"more confident"},{key:"D",text:"the confidently"}],
+                correct: "B",
+                explanation: {
+                    step1: "Tôi càng học nhiều cho kỳ thi tuyển sinh sắp tới, tôi càng cảm thấy tự tin hơn về cơ hội đạt điểm cao của cá nhân mình.",
+                    step2: "Áp dụng cấu trúc so sánh kép (Càng... thì càng...): The + so sánh hơn + S + V, the + so sánh hơn + S + V.",
+                    step3: "Vế đầu đã khởi đầu bằng 'The more I study', do đó vế sau bắt buộc phải chọn cấu trúc tương tự với tính từ dài 'confident' -> 'the more confident'.",
+                    step4: "Loại A vì dùng so sánh nhất. Loại C thiếu mạo từ 'the'. Loại D dùng sai từ loại trạng từ."
+                }
+            },
+            {
+                id: 2,
+                question: "The architectural design of the new national library is significantly ______ than that of the previous one built in the early nineteenth century.",
+                options: [{key:"A",text:"more sophisticated"},{key:"B",text:"sophisticateder"},{key:"C",text:"the most sophisticated"},{key:"D",text:"as sophisticated"}],
+                correct: "A",
+                explanation: {
+                    step1: "Thiết kế kiến trúc của thư viện quốc gia mới phức tạp và tinh xảo hơn đáng kể so với thiết kế của thư viện trước đó được xây dựng vào đầu thế kỷ XIX.",
+                    step2: "Từ nhận biết 'than' biểu thị cấu trúc so sánh hơn giữa 2 đối tượng thư viện mới và thư viện cũ.",
+                    step3: "'Sophisticated' là tính từ dài, do đó dạng so sánh hơn bắt buộc là 'more sophisticated'. Trạng từ 'significantly' đứng trước đóng vai trò nhấn mạnh mức độ chênh lệch.",
+                    step4: "Loại B sai nguyên tắc thêm đuôi tính từ ngắn. Loại C dùng so sánh nhất. Loại D dùng so sánh bằng."
+                }
+            },
+            {
+                id: 3,
+                question: "Of the two candidates who applied for the managerial position, Sarah is definitely the _______ qualified in terms of experience.",
+                options: [{key:"A",text:"more"},{key:"B",text:"most"},{key:"C",text:"best"},{key:"D",text:"much"}],
+                correct: "A",
+                explanation: {
+                    step1: "Trong số hai ứng viên nộp đơn vào vị trí quản lý, Sarah chắc chắn là người có năng lực hơn xét về mặt kinh nghiệm.",
+                    step2: "Quy tắc ngữ pháp đặc biệt: Khi so sánh giữa chính xác 2 đối tượng ('Of the two...'), chúng ta phải sử dụng cấu trúc: the + hình thức so sánh hơn.",
+                    step3: "Tính từ 'qualified' đi kèm cấu trúc này biến đổi thành 'the more qualified'.",
+                    step4: "Loại B, C vì chỉ dùng cấu trúc so sánh nhất khi so sánh tổng số đối tượng từ 3 trở lên."
+                }
+            },
+            {
+                id: 4,
+                question: "The new skyscraper in the financial district is _______ building in the city, standing at an impressive height of 500 meters.",
+                options: [{key:"A",text:"the taller"},{key:"B",text:"far taller"},{key:"C",text:"by far the tallest"},{key:"D",text:"tallest"}],
+                correct: "C",
+                explanation: {
+                    step1: "Tòa nhà chọc trời mới ở khu tài chính là tòa nhà cao nhất thành phố cho đến nay, đứng ở độ cao ấn tượng 500 mét.",
+                    step2: "Căn cứ cụm từ phạm vi bao trùm 'in the city' (trong thành phố), ta phải sử dụng cấu trúc so sánh nhất.",
+                    step3: "Cụm từ 'by far' được dùng đứng trước so sánh nhất nhằm mục đích nhấn mạnh khoảng cách vượt trội độc tôn của đối tượng.",
+                    step4: "Loại A, B do sai kiểu so sánh hơn. Loại D thiếu mạo từ 'the' bắt buộc."
+                }
+            },
+            {
+                id: 5,
+                question: "The more technology advances in the modern era, _______ it becomes for people to connect across great distances.",
+                options: [{key:"A",text:"the easier"},{key:"B",text:"the easiest"},{key:"C",text:"easier"},{key:"D",text:"more easy"}],
+                correct: "A",
+                explanation: {
+                    step1: "Công nghệ càng phát triển trong kỷ nguyên hiện đại, con người càng dễ dàng kết nối với nhau qua khoảng cách lớn.",
+                    step2: "Áp dụng cấu trúc so sánh kép: The + so sánh hơn + S + V, the + so sánh hơn + S + V.",
+                    step3: "Tính từ ngắn 'easy' chuyển sang dạng so sánh hơn biến đổi y dài thành i ngắn rồi thêm đuôi -er -> 'the easier'.",
+                    step4: "Loại B sai so sánh nhất. Loại C thiếu 'the'. Loại D sai quy tắc biến đổi tính từ ngắn."
+                }
+            },
+            {
+                id: 6,
+                question: "He is not _______ talented as his older brother when it comes to playing professional chess in international tournaments.",
+                options: [{key:"A",text:"so"},{key:"B",text:"more"},{key:"C",text:"the more"},{key:"D",text:"the most"}],
+                correct: "A",
+                explanation: {
+                    step1: "Anh ấy không tài năng bằng anh trai mình khi nói đến việc chơi cờ vua chuyên nghiệp trong các giải đấu quốc tế.",
+                    step2: "Phía sau khoảng trống có từ 'as', gợi ý đến cấu trúc so sánh bằng hoặc không bằng.",
+                    step3: "Trong câu phủ định (có từ 'not'), người ta thường dùng cấu trúc 'not so + adj + as' thay thế cho 'not as + adj + as'.",
+                    step4: "Loại B, C, D vì không kết hợp logic tạo thành cụm từ đi với 'as' ở vế sau."
+                }
+            },
+            {
+                id: 7,
+                question: "The Amazon rainforest is home to ______ biodiversity found anywhere on Earth, supporting millions of unique species of flora and fauna.",
+                options: [{key:"A",text:"the greatest"},{key:"B",text:"greater"},{key:"C",text:"as great as"},{key:"D",text:"the most great"}],
+                correct: "A",
+                explanation: {
+                    step1: "Rừng mưa Amazon là nơi có đa dạng sinh học lớn nhất được tìm thấy ở bất kỳ đâu trên Trái Đất, nuôi dưỡng hàng triệu loài động thực vật độc đáo.",
+                    step2: "Cụm từ phạm vi so sánh rộng lớn tuyệt đối 'anywhere on Earth' (bất kỳ nơi nào trên Trái Đất) bắt buộc phải dùng so sánh nhất.",
+                    step3: "'Great' là tính từ ngắn, dạng so sánh nhất là 'the greatest'.",
+                    step4: "Loại D sai quy tắc lập cấu trúc so sánh nhất của tính từ ngắn."
+                }
+            },
+            {
+                id: 8,
+                question: "Gasoline prices in the global market are getting _______ every month, which significantly affects the daily cost of living.",
+                options: [{key:"A",text:"higher and higher"},{key:"B",text:"more and more high"},{key:"C",text:"the highest"},{key:"D",text:"as high"}],
+                correct: "A",
+                explanation: {
+                    step1: "Giá xăng trên thị trường toàn cầu ngày càng tăng cao theo từng tháng, điều này ảnh hưởng đáng kể đến chi phí sinh hoạt hàng ngày.",
+                    step2: "Cấu trúc so sánh lũy tiến (ngày càng...) đối với tính từ ngắn: adj-er and adj-er.",
+                    step3: "'High' là tính từ ngắn nên áp dụng công thức ta được 'higher and higher'.",
+                    step4: "Loại B sai nguyên tắc cấu trúc tính từ ngắn. Loại C, D không hợp ngữ cảnh thay đổi tăng dần."
+                }
+            },
+            {
+                id: 9,
+                question: "This is _______ movie I have ever seen in my life, and I almost fell asleep during the climax.",
+                options: [{key:"A",text:"as boring"},{key:"B",text:"more boring"},{key:"C",text:"the most boring"},{key:"D",text:"boringest"}],
+                correct: "C",
+                explanation: {
+                    step1: "Đây là bộ phim nhàm chán nhất mà tôi từng xem trong đời, và tôi suýt ngủ gật trong phần cao trào.",
+                    step2: "Dấu hiệu nhận biết kinh điển của so sánh nhất: 'I have ever seen in my life' (từng xem trong đời).",
+                    step3: "'Boring' là tính từ dài, cấu trúc so sánh nhất tương ứng là 'the most boring'.",
+                    step4: "Loại D sai quy tắc chia đuôi của tính từ dài."
+                }
+            },
+            {
+                id: 10,
+                question: "Of all the elite players on the national team, Kevin runs _______ during the most critical moments of the match.",
+                options: [{key:"A",text:"more fast"},{key:"B",text:"faster"},{key:"C",text:"the fastest"},{key:"D",text:"as fast"}],
+                correct: "C",
+                explanation: {
+                    step1: "Trong số tất cả các cầu thủ ưu tú của đội tuyển quốc gia, Kevin chạy nhanh nhất trong những thời điểm quan trọng nhất của trận đấu.",
+                    step2: "Khởi đầu câu bằng trạng ngữ chỉ tập hợp số nhiều 'Of all the elite players...' (Trong số tất cả...) chỉ phạm vi so sánh từ 3 đối tượng trở lên.",
+                    step3: "Do đó phải sử dụng so sánh nhất. 'Fast' vừa là tính từ vừa là trạng từ ngắn, dạng so sánh nhất là 'the fastest'.",
+                    step4: "Loại A, B do thuộc dạng so sánh hơn."
+                }
+            },
+            {
+                id: 11,
+                question: "The restaurant was _______ crowded than we expected, so we were able to get a comfortable table for four immediately.",
+                options: [{key:"A",text:"far less"},{key:"B",text:"much more"},{key:"C",text:"the least"},{key:"D",text:"as little"}],
+                correct: "A",
+                explanation: {
+                    step1: "Nhà hàng ít đông đúc hơn nhiều so với chúng tôi tưởng, vì vậy chúng tôi có thể có được một chiếc bàn thoải mái cho bốn người ngay lập tức.",
+                    step2: "Có từ 'than' báo hiệu cấu trúc so sánh hơn/kém. Vế sau giải thích hệ quả tích cực 'có bàn ngay lập tức', chứng tỏ quán phải vắng khách.",
+                    step3: "Do đó dùng cấu trúc so sánh kém 'less... than', kết hợp trạng từ nhấn mạnh 'far' phía trước -> 'far less'.",
+                    step4: "Loại B sai logic ý nghĩa (nếu đông hơn thì không thể có bàn ngay). Loại C, D sai cấu trúc."
+                }
+            },
+            {
+                id: 12,
+                question: "She is _______ as her mother was at the same age, which always surprises everyone in their family.",
+                options: [{key:"A",text:"every bit as beautiful"},{key:"B",text:"more beautiful"},{key:"C",text:"the most beautiful"},{key:"D",text:"beautifuler"}],
+                correct: "A",
+                explanation: {
+                    step1: "Cô ấy xinh đẹp giống hệt mẹ mình ở cùng độ tuổi, điều này luôn làm mọi người trong gia đình ngạc nhiên.",
+                    step2: "Phía sau có từ 'as', gợi ý cấu trúc so sánh bằng: as + adj + as.",
+                    step3: "Cụm từ 'every bit' là thành ngữ nhấn mạnh đứng trước cấu trúc so sánh bằng, mang ý nghĩa 'hoàn toàn giống/bằng từng chút một'.",
+                    step4: "Loại B, C, D không thể kết hợp trực tiếp tạo thành cụm ngữ pháp đúng cấu trúc đi với 'as'."
+                }
+            },
+            {
+                id: 13,
+                question: "The _______ the car you choose to buy, the _______ it is to maintain over a long period of time.",
+                options: [{key:"A",text:"older / more expensive"},{key:"B",text:"oldest / most expensive"},{key:"C",text:"old / expensive"},{key:"D",text:"older / expensiver"}],
+                correct: "A",
+                explanation: {
+                    step1: "Chiếc xe bạn chọn mua càng cũ thì chi phí bảo dưỡng trong thời gian dài càng đắt đỏ.",
+                    step2: "Áp dụng cấu trúc so sánh kép song hành: The + so sánh hơn + S + V, the + so sánh hơn + S + V.",
+                    step3: "Vế 1 dùng tính từ ngắn 'old' -> 'older'. Vế 2 dùng tính từ dài 'expensive' -> 'more expensive'. Ghép lại được phương án A.",
+                    step4: "Loại D vì 'expensive' là tính từ dài, không được thêm đuôi -er."
+                }
+            },
+            {
+                id: 14,
+                question: "This new laptop model is _______ expensive than the previous one, but it’s definitely worth the long-term investment.",
+                options: [{key:"A",text:"slightly more"},{key:"B",text:"the most"},{key:"C",text:"as"},{key:"D",text:"much"}],
+                correct: "A",
+                explanation: {
+                    step1: "Mẫu máy tính xách tay mới này đắt hơn một chút so với mẫu trước đó, nhưng nó chắc chắn xứng đáng để đầu tư lâu dài.",
+                    step2: "Có từ 'than' quy định câu phải chia ở dạng so sánh hơn. Bản thân cụm 'expensive' đã là tính từ dài.",
+                    step3: "Do đó cụm từ thích hợp là 'slightly more' (đắt hơn một chút). Trạng từ 'slightly' dùng để điều chỉnh mức độ chênh lệch nhỏ.",
+                    step4: "Loại D sai vì thiếu từ 'more' đứng trước tính từ dài trong cấu trúc so sánh hơn."
+                }
+            },
+            {
+                id: 15,
+                question: "She doesn’t drive _______ as she used to when she first got her license and lived in the city.",
+                options: [{key:"A",text:"careless"},{key:"B",text:"more careless"},{key:"C",text:"the most carelessly"},{key:"D",text:"as carelessly"}],
+                correct: "D",
+                explanation: {
+                    step1: "Cô ấy không lái xe bất cẩn như trước đây khi cô ấy mới nhận được bằng lái và sống ở thành phố.",
+                    step2: "Động từ chính trong câu là động từ thường 'drive' hành động, nên thành phần bổ nghĩa bắt buộc phải là trạng từ (adv: carelessly).",
+                    step3: "Kết hợp cấu trúc so sánh bằng/không bằng ở thể phủ định: not + as/so + adv + as.",
+                    step4: "Loại A, B sai từ loại tính từ. Loại C thuộc dạng so sánh nhất."
+                }
+            },
+            {
+                id: 16,
+                question: "Scientific research has proven that gold is _______ heavier than iron, which explains its different physical properties and uses.",
+                options: [{key:"A",text:"more"},{key:"B",text:"much"},{key:"C",text:"very"},{key:"D",text:"too"}],
+                correct: "B",
+                explanation: {
+                    step1: "Nghiên cứu khoa học đã chứng minh rằng vàng nặng hơn sắt rất nhiều, điều này giải thích cho các thuộc tính vật lý và công dụng khác nhau của nó.",
+                    step2: "Từ 'heavier' là tính từ ngắn đã được chia ở dạng so sánh hơn sẵn rồi.",
+                    step3: "Để nhấn mạnh mức độ chênh lệch lớn trong cấu trúc so sánh hơn, người ta sử dụng các trạng từ như 'much' hoặc 'far' đứng trước.",
+                    step4: "Loại A vì không dùng 'more' đi kèm tính từ ngắn đã thêm -er. Loại C không bổ nghĩa cho so sánh hơn."
+                }
+            },
+            {
+                id: 17,
+                question: "Of all the candidates who applied for the senior management position, Mr. Harrison is undoubtedly ______ and most experienced professional.",
+                options: [{key:"A",text:"the more creative"},{key:"B",text:"the most creative"},{key:"C",text:"more creative"},{key:"D",text:"as creative as"}],
+                correct: "B",
+                explanation: {
+                    step1: "Trong số tất cả các ứng viên ứng tuyển vào vị trí quản lý cấp cao, ông Harrison chắc chắn là chuyên gia sáng tạo nhất và giàu kinh nghiệm nhất.",
+                    step2: "Bắt đầu bằng cụm tập hợp lớn 'Of all the candidates' (Trong tất cả các ứng viên), bắt buộc phải dùng cấu trúc so sánh nhất.",
+                    step3: "Hơn nữa, vế sau dùng tính từ song hành 'most experienced' nối bằng liên từ 'and', nên vị trí trống bắt buộc phải chia so sánh nhất đồng dạng -> 'the most creative'.",
+                    step4: "Loại A, C, D sai bản chất loại hình so sánh."
+                }
+            },
+            {
+                id: 18,
+                question: "Of the two brothers currently studying abroad, the younger one is surprisingly the _______ of the two.",
+                options: [{key:"A",text:"taller"},{key:"B",text:"tallest"},{key:"C",text:"more tall"},{key:"D",text:"tall"}],
+                correct: "A",
+                explanation: {
+                    step1: "Trong số hai anh em hiện đang du học, người em trai đáng ngạc nhiên lại là người cao hơn trong hai người.",
+                    step2: "Tiếp tục áp dụng quy tắc vàng: So sánh giữa 2 đối tượng ('Of the two...'), dùng công thức 'the + so sánh hơn'.",
+                    step3: "'Tall' là tính từ ngắn nên dạng so sánh hơn tương ứng là 'taller'. Kết hợp lại ta có 'the taller'.",
+                    step4: "Loại B do nhầm sang cấu trúc so sánh nhất (chỉ dùng cho tập hợp từ 3 trở lên)."
+                }
+            },
+            {
+                id: 19,
+                question: "It’s becoming _______ to find a high-paying job in this unstable economic climate regardless of your academic background.",
+                options: [{key:"A",text:"harder and harder"},{key:"B",text:"the hardest"},{key:"C",text:"more hard"},{key:"D",text:"as hard"}],
+                correct: "A",
+                explanation: {
+                    step1: "Việc tìm kiếm một công việc lương cao trong bối cảnh kinh tế bất ổn này ngày càng trở nên khó khăn hơn, bất kể nền tảng học vấn của bạn là gì.",
+                    step2: "Ngữ cảnh diễn tả xu hướng biến đổi liên tục tăng tiến theo thời gian (ngày càng...).",
+                    step3: "Cấu trúc so sánh lũy tiến với tính từ ngắn 'hard' là 'harder and harder'.",
+                    step4: "Loại C sai nguyên tắc chia tính từ ngắn. Loại B, D không lột tả được xu hướng biến chuyển."
+                }
+            },
+            {
+                id: 20,
+                question: "Nothing is _______ than having true peace of mind after a long day of hard work and many responsibilities.",
+                options: [{key:"A",text:"preciouser"},{key:"B",text:"the most precious"},{key:"C",text:"as precious"},{key:"D",text:"more precious"}],
+                correct: "D",
+                explanation: {
+                    step1: "Không có gì quý giá hơn việc có được sự bình yên thực sự trong tâm hồn sau một ngày dài làm việc vất vả và nhiều trách nhiệm.",
+                    step2: "Có từ nhận biết 'than' quy định cấu trúc so sánh hơn.",
+                    step3: "'Precious' là tính từ dài, do đó dạng so sánh hơn chính xác của nó phải là 'more precious'.",
+                    step4: "Loại A sai quy tắc cấu trúc tính từ dài."
+                }
+            },
+            {
+                id: 21,
+                question: "The experimental results were _______ what we had hoped for, considering the severe lack of resources and technical equipment.",
+                options: [{key:"A",text:"nowhere near as good as"},{key:"B",text:"not so better than"},{key:"C",text:"less good as"},{key:"D",text:"the least good of"}],
+                correct: "A",
+                explanation: {
+                    step1: "Kết quả thử nghiệm còn lâu mới tốt bằng những gì chúng tôi mong đợi, xem xét đến tình trạng thiếu hụt nghiêm trọng tài nguyên và thiết bị kỹ thuật.",
+                    step2: "Sử dụng thành ngữ nhấn mạnh mức độ trong cấu trúc so sánh bằng: 'nowhere near as + adj + as' (còn lâu mới bằng/kém xa).",
+                    step3: "Cụm từ này hoàn toàn phù hợp cả về ngữ pháp lẫn ý nghĩa biểu đạt sự thất vọng về kết quả.",
+                    step4: "Loại B, C sai cấu trúc cơ bản. Loại D không hợp ngữ cảnh."
+                }
+            },
+            {
+                id: 22,
+                question: "The more elaborate the security plan, _______ it is that something minor will eventually go wrong at some point.",
+                options: [{key:"A",text:"the more likely"},{key:"B",text:"the most likely"},{key:"C",text:"likelier"},{key:"D",text:"more likely"}],
+                correct: "A",
+                explanation: {
+                    step1: "Kế hoạch an ninh càng phức tạp, càng có nhiều khả năng một lỗi nhỏ nào đó cuối cùng sẽ xảy ra tại một thời điểm nào đó.",
+                    step2: "Cấu trúc câu so sánh kép: The + so sánh hơn + S + V, the + so sánh hơn + S + V.",
+                    step3: "'Likely' được tính như tính từ dài trong cấu trúc so sánh kép này, kết hợp tạo thành 'the more likely'.",
+                    step4: "Loại B sai so sánh nhất. Loại C, D thiếu mạo từ 'the'."
+                }
+            },
+            {
+                id: 23,
+                question: "This newly developed electric car is actually _______ than the gasoline-powered model we tested last month.",
+                options: [{key:"A",text:"efficienter"},{key:"B",text:"much more efficient"},{key:"C",text:"so efficient as"},{key:"D",text:"the most efficient"}],
+                correct: "B",
+                explanation: {
+                    step1: "Chiếc xe điện mới phát triển này thực sự hiệu quả hơn nhiều so với mẫu chạy bằng xăng mà chúng tôi đã thử nghiệm vào tháng trước.",
+                    step2: "Có từ 'than' yêu cầu cấu trúc so sánh hơn. 'Efficient' là tính từ dài.",
+                    step3: "Do đó hình thức so sánh hơn là 'more efficient'. Người ta thêm trạng từ 'much' phía trước để nhấn mạnh độ vượt trội.",
+                    step4: "Loại A sai quy tắc tính từ dài. Loại C, D sai kiểu loại so sánh."
+                }
+            },
+            {
+                id: 24,
+                question: "Between the two architectural designs submitted for the museum, the first one is definitely _______.",
+                options: [{key:"A",text:"the more creative"},{key:"B",text:"the most creative"},{key:"C",text:"more creative than"},{key:"D",text:"as creative as"}],
+                correct: "A",
+                explanation: {
+                    step1: "Giữa hai thiết kế kiến trúc được nộp cho bảo tàng, thiết kế đầu tiên chắc chắn là thiết kế sáng tạo hơn.",
+                    step2: "So sánh giới hạn giữa 2 đối tượng ('Between the two...'), áp dụng công thức bắt buộc: the + so sánh hơn.",
+                    step3: "Do đó ta chọn 'the more creative'.",
+                    step4: "Loại B vì là so sánh nhất. Loại C thừa từ 'than' vì ở cuối câu không còn đối tượng thứ hai đứng sau."
+                }
+            },
+            {
+                id: 25,
+                question: "Of the three methods proposed, the last one is _______ effective in solving the current urban pollution.",
+                options: [{key:"A",text:"the least"},{key:"B",text:"less"},{key:"C",text:"as little"},{key:"D",text:"little than"}],
+                correct: "A",
+                explanation: {
+                    step1: "Trong số ba phương pháp được đề xuất, phương pháp cuối cùng là ít hiệu quả nhất trong việc giải quyết tình trạng ô nhiễm đô thị hiện nay.",
+                    step2: "Cụm từ tập hợp 'Of the three methods' (Trong số ba...) chỉ rõ số lượng đối tượng là 3, vì vậy phải dùng cấu trúc so sánh nhất.",
+                    step3: "Để diễn tả ý nghĩa kém nhất, ta dùng cụm từ 'the least + tính từ dài' -> 'the least effective'.",
+                    step4: "Loại B, C, D sai vì chỉ thuộc cấp độ so sánh hơn hoặc so sánh bằng."
+                }
+            },
+            {
+                id: 26,
+                question: "The scenery in the northern highlands is _______ than any words could possibly describe in a short poem.",
+                options: [{key:"A",text:"breathtakinger"},{key:"B",text:"the most breathtaking"},{key:"C",text:"as breathtaking"},{key:"D",text:"far more breathtaking"}],
+                correct: "D",
+                explanation: {
+                    step1: "Phong cảnh ở vùng cao phía bắc ngoạn mục hơn nhiều so với bất kỳ từ ngữ nào có thể diễn tả trong một bài thơ ngắn.",
+                    step2: "Dấu hiệu nhận biết 'than' yêu cầu cấu trúc so sánh hơn. 'Breathtaking' là tính từ dài.",
+                    step3: "Do đó cấu trúc chuẩn là 'more breathtaking'. Có thể thêm trạng từ 'far' đứng đầu để nhấn mạnh mức độ cao vút của cảnh sắc.",
+                    step4: "Loại A sai quy tắc biến đổi tính từ. Loại B, C sai cấu trúc so sánh."
+                }
+            },
+            {
+                id: 27,
+                question: "He is not _______ as he appears to be when he is giving speeches on television.",
+                options: [{key:"A",text:"wealthier"},{key:"B",text:"more wealthy"},{key:"C",text:"the wealthiest"},{key:"D",text:"nearly as wealthy"}],
+                correct: "D",
+                explanation: {
+                    step1: "Anh ấy không giàu có gần như những gì anh ấy thể hiện khi phát biểu trên truyền hình.",
+                    step2: "Phía sau khoảng trống có liên từ 'as', gợi ý cấu trúc so sánh bằng/không bằng.",
+                    step3: "Cụm cấu trúc phủ định nhấn mạnh mức độ chênh lệch nhỏ: 'not + nearly as + adj + as' (không hẳn bằng/không bằng một phần của).",
+                    step4: "Loại A, B, C không phù hợp ngữ pháp phối hợp với từ 'as' ở phía sau câu."
+                }
+            },
+            {
+                id: 28,
+                question: "The _______ the demand for high-end luxury products, the _______ the retail prices will soar in the market.",
+                options: [{key:"A",text:"greater / higher"},{key:"B",text:"greatest / highest"},{key:"C",text:"more great / more high"},{key:"D",text:"great / high"}],
+                correct: "A",
+                explanation: {
+                    step1: "Nhu cầu đối với các sản phẩm xa xỉ cao cấp càng lớn, giá bán lẻ trên thị trường sẽ càng tăng cao.",
+                    step2: "Áp dụng công thức so sánh kép tỷ lệ thuận: The + so sánh hơn..., the + so sánh hơn...",
+                    step3: "Cả 'great' và 'high' đều là tính từ ngắn, dạng so sánh hơn tương ứng lần lượt là 'greater' và 'higher'.",
+                    step4: "Loại C sai vì tính từ ngắn không kết hợp với từ 'more'."
+                }
+            },
+            {
+                id: 29,
+                question: "The second edition of the encyclopedia is _______ to the first one in terms of comprehensive information.",
+                options: [{key:"A",text:"vastly superior"},{key:"B",text:"more superior"},{key:"C",text:"the most superior"},{key:"D",text:"as superior as"}],
+                correct: "A",
+                explanation: {
+                    step1: "Phiên bản thứ hai của cuốn bách khoa toàn thư vượt trội hơn hẳn so với phiên bản đầu tiên về mặt thông tin toàn diện.",
+                    step2: "Tính từ 'superior' (vượt trội hơn, tốt hơn) là một tính từ mang gốc Latinh đã mang sẵn bản chất ý nghĩa so sánh hơn bên trong.",
+                    step3: "Do đó, không bao giờ kết hợp nó với 'more' hay 'most'. Ta có thể dùng trạng từ mức độ 'vastly' (bao la, rộng lớn, rất nhiều) đứng trước để nhấn mạnh.",
+                    step4: "Loại B, C, D đều mắc lỗi lặp từ thừa cấu trúc so sánh."
+                }
+            },
+            {
+                id: 30,
+                question: "It is becoming _______ to ignore the environmental consequences of our daily consumption habits nowadays.",
+                options: [{key:"A",text:"more hard"},{key:"B",text:"the hardest"},{key:"C",text:"harder and harder"},{key:"D",text:"as hard"}],
+                correct: "C",
+                explanation: {
+                    step1: "Ngày nay, việc phớt lờ các hậu quả môi trường từ thói quen tiêu dùng hàng ngày của chúng ta ngày càng trở nên khó khăn hơn.",
+                    step2: "Đi kèm động từ biến chuyển xu hướng 'become', kết hợp từ chỉ thời gian 'nowadays' báo hiệu cấu trúc so sánh lũy tiến.",
+                    step3: "Công thức lũy tiến cho tính từ ngắn 'hard' là 'harder and harder'.",
+                    step4: "Loại A sai dạng thức bổ trợ. Loại B, D không lột tả được bản chất biến chuyển liên tục."
+                }
+            },
+            {
+                id: 31,
+                question: "Many critics argue that the sequel to the movie was not ______ as the original version released a decade ago.",
+                options: [{key:"A",text:"so interesting"},{key:"B",text:"more interesting"},{key:"C",text:"most interesting"},{key:"D",text:"as interesting"}],
+                correct: "A",
+                explanation: {
+                    step1: "Nhiều nhà phê bình tranh luận rằng phần tiếp theo của bộ phim không hay bằng phiên bản gốc được phát hành một thập kỷ trước.",
+                    step2: "Mẫu câu có từ phủ định 'not' kết hợp với từ 'as' ở phía sau tạo thành cấu trúc so sánh không bằng.",
+                    step3: "Theo quy tắc, 'not so + adj + as' hoàn toàn bằng nghĩa và được dùng cực kỳ phổ biến thay cho 'not as... as' trong câu phủ định.",
+                    step4: "Phương án A là lựa chọn phù hợp nhất. Chọn D vẫn đúng ngữ pháp cơ bản nhưng A tối ưu hơn trong các đề thi học thuật nâng cao khi phân hóa."
+                }
+            },
+            {
+                id: 32,
+                question: "The new policy proved to be _______ than the previous one in reducing the annual crime rate.",
+                options: [{key:"A",text:"more effective"},{key:"B",text:"the most effective"},{key:"C",text:"so effective as"},{key:"D",text:"effectiver"}],
+                correct: "A",
+                explanation: {
+                    step1: "Chính sách mới chứng minh mang lại hiệu quả hơn so với chính sách trước đó trong việc giảm tỷ lệ tội phạm hàng năm.",
+                    step2: "Từ 'than' quy định dùng so sánh hơn. 'Effective' là tính từ dài.",
+                    step3: "Hình thức so sánh hơn chuẩn mực là 'more effective'.",
+                    step4: "Loại D sai quy tắc cấu tạo từ loại tính từ."
+                }
+            },
+            {
+                id: 33,
+                question: "Living in a rural area is _______ than living in a crowded city with high pollution levels.",
+                options: [{key:"A",text:"more peaceful"},{key:"B",text:"the most peaceful"},{key:"C",text:"as peaceful"},{key:"D",text:"peacefuller"}],
+                correct: "A",
+                explanation: {
+                    step1: "Sống ở vùng nông thôn thì yên bình hơn là sống ở một thành phố đông đúc với mức độ ô nhiễm cao.",
+                    step2: "Dấu hiệu 'than' quy định cấu trúc so sánh hơn. 'Peaceful' là tính từ dài.",
+                    step3: "Do đó hình thức chính xác là 'more peaceful'.",
+                    step4: "Loại D sai quy tắc thêm đuôi của tính từ dài có 2 âm tiết kết thúc bằng đuôi -ful."
+                }
+            },
+            {
+                id: 34,
+                question: "After the new security protocol was implemented, the system started to operate _______ than it ever had in the past decade.",
+                options: [{key:"A",text:"efficienter"},{key:"B",text:"more efficiently"},{key:"C",text:"as efficient as"},{key:"D",text:"the most efficiently"}],
+                correct: "B",
+                explanation: {
+                    step1: "Sau khi giao thức bảo mật mới được triển khai, hệ thống bắt đầu hoạt động hiệu quả hơn so với những gì nó từng làm trong thập kỷ qua.",
+                    step2: "Động từ tương tác chính đứng trước là động từ thường 'operate' hành động, do đó thành phần bổ nghĩa bắt buộc phải là một trạng từ (adv: efficiently).",
+                    step3: "Kết hợp từ 'than' quy định so sánh hơn, trạng từ dài đi kèm với từ 'more' -> 'more efficiently'.",
+                    step4: "Loại A, C sai từ loại và cấu trúc cơ bản."
+                }
+            },
+            {
+                id: 35,
+                question: "The renovation project was _______ than the architect had estimated in the preliminary report last month.",
+                options: [{key:"A",text:"more expensive"},{key:"B",text:"the most expensive"},{key:"C",text:"as expensive as"},{key:"D",text:"expensiver"}],
+                correct: "A",
+                explanation: {
+                    step1: "Dự án cải tạo đắt đỏ hơn so với những gì kiến trúc sư đã ước tính trong báo cáo sơ bộ vào tháng trước.",
+                    step2: "Có từ 'than' quy định so sánh hơn. 'Expensive' là tính từ dài.",
+                    step3: "Dạng so sánh hơn chính xác của nó phải là 'more expensive'.",
+                    step4: "Loại D sai quy tắc thêm hậu tố."
+                }
+            },
+            {
+                id: 36,
+                question: "Their contribution to the charity was _______ than we could have ever imagined or hoped for.",
+                options: [{key:"A",text:"so substantial as"},{key:"B",text:"the most substantial"},{key:"C",text:"more substantial"},{key:"D",text:"substantialer"}],
+                correct: "C",
+                explanation: {
+                    step1: "Sự đóng góp của họ cho tổ chức từ thiện lớn lao hơn những gì chúng tôi có thể tưởng tượng hoặc hy vọng.",
+                    step2: "Từ nhận biết 'than' quy định hình thức so sánh hơn. 'Substantial' là tính từ dài.",
+                    step3: "Do đó dạng thức so sánh hơn tương ứng là 'more substantial'.",
+                    step4: "Loại D sai quy tắc lập cấu trúc tính từ dài."
+                }
+            },
+            {
+                id: 37,
+                question: "She’s _______ as her brother, if not more so, when it comes to solving difficult physics problems.",
+                options: [{key:"A",text:"so intelligent"},{key:"B",text:"more intelligent"},{key:"C",text:"the most intelligent"},{key:"D",text:"as intelligent"}],
+                correct: "D",
+                explanation: {
+                    step1: "Cô ấy thông minh bằng anh trai mình, nếu không muốn nói là hơn, khi giải các bài toán vật lý khó.",
+                    step2: "Phía sau khoảng trống có từ 'as' cấu thành cấu trúc so sánh bằng: as + adj + as.",
+                    step3: "Do đó từ cần điền vào chỗ trống là 'as intelligent'. Cụm chèn thêm 'if not more so' (nếu không muốn nói là hơn) là thành ngữ dùng cực phổ biến chen giữa câu.",
+                    step4: "Loại A vì 'so...as' chỉ dùng chủ yếu trong cấu trúc câu mang ý nghĩa phủ định."
+                }
+            },
+            {
+                id: 38,
+                question: "The impact of the financial crisis was _______ in rural areas than in the major industrial zones.",
+                options: [{key:"A",text:"more severe"},{key:"B",text:"the most severe"},{key:"C",text:"as severe as"},{key:"D",text:"severer"}],
+                correct: "A",
+                explanation: {
+                    step1: "Tác động của cuộc khủng hoảng tài chính ở vùng nông thôn nghiêm trọng hơn so với các khu công nghiệp lớn.",
+                    step2: "Từ 'than' yêu cầu cấu trúc so sánh hơn. 'Severe' là tính từ dài gồm 2 âm tiết.",
+                    step3: "Dạng thức so sánh hơn chính xác là 'more severe'.",
+                    step4: "Loại D không chuẩn xác theo quy tắc phân loại nhóm tính từ học thuật."
+                }
+            },
+            {
+                id: 39,
+                question: "We are _______ now than we were five years ago before the national economy started to decline.",
+                options: [{key:"A",text:"worse off"},{key:"B",text:"the worst off"},{key:"C",text:"as bad off"},{key:"D",text:"worse and worse"}],
+                correct: "A",
+                explanation: {
+                    step1: "Hiện tại chúng tôi có điều kiện sống tồi tệ hơn so với năm năm trước trước khi nền kinh tế quốc gia bắt đầu suy thoái.",
+                    step2: "Cụm từ gốc tính từ ghép chỉ tình trạng: 'badly off' hoặc 'bad off' (nghèo khó, có hoàn cảnh sống tệ).",
+                    step3: "Khi chuyển sang so sánh hơn đi kèm với từ 'than', từ 'bad' biến đổi đặc biệt thành hình thái bất quy tắc 'worse' -> 'worse off'.",
+                    step4: "Loại B thuộc cấp độ so sánh nhất. Loại D sai dạng thức kết hợp câu."
+                }
+            },
+            {
+                id: 40,
+                question: "The total cost of the infrastructure project turned out to be nearly _______ the initial estimates provided by the consulting firm.",
+                options: [{key:"A",text:"three times highest as"},{key:"B",text:"three times higher than"},{key:"C",text:"as three times high as"},{key:"D",text:"three times as high as"}],
+                correct: "D",
+                explanation: {
+                    step1: "Tổng chi phí của dự án cơ sở hạ tầng hóa ra cao gần gấp ba lần so với ước tính ban đầu do công ty tư vấn cung cấp.",
+                    step2: "Áp dụng cấu trúc so sánh bội số (gấp số lần): Số lần (three times) + as + adj + as.",
+                    step3: "Theo đúng công thức ta ráp được cụm từ hoàn chỉnh: 'three times as high as'.",
+                    step4: "Loại B tuy đúng nghĩa so sánh hơn thông thường nhưng không đúng quy tắc diễn đạt số lần cấp số nhân tiêu chuẩn bằng hình thức so sánh bằng."
+                }
+            },
+            {
+                id: 41,
+                question: "The new software update makes the entire operating system run ______ and more efficiently than the previous version did last month.",
+                options: [{key:"A",text:"smooth"},{key:"B",text:"smoother"},{key:"C",text:"more smooth"},{key:"D",text:"smoothest"}],
+                correct: "B",
+                explanation: {
+                    step1: "Bản cập nhật phần mềm mới giúp toàn bộ hệ điều hành chạy mượt mà hơn và hiệu quả hơn so với phiên bản trước đó vào tháng trước.",
+                    step2: "Từ 'than' quy định dạng so sánh hơn. Ở vế sau ta thấy trạng từ dài đã được chia dạng 'more efficiently'.",
+                    step3: "Từ 'smooth' vừa có thể đóng vai trò trạng từ ngắn trong văn phong giao tiếp, chia dạng so sánh hơn song hành đồng dạng là 'smoother'.",
+                    step4: "Loại A sai từ loại và cấp độ so sánh. Loại C không chuẩn ngữ pháp."
+                }
+            },
+            {
+                id: 42,
+                question: "______ people participate in the environmental conservation program, the better the chances of saving endangered species from extinction.",
+                options: [{key:"A",text:"more"},{key:"B",text:"many"},{key:"C",text:"most"},{key:"D",text:"the more"}],
+                correct: "D",
+                explanation: {
+                    step1: "Càng có nhiều người tham gia vào chương trình bảo tồn môi trường, cơ hội cứu các loài có nguy cơ tuyệt chủng khỏi tuyệt chủng càng tốt hơn.",
+                    step2: "Áp dụng cấu trúc câu so sánh kép song hành vế: The + so sánh hơn..., the + so sánh hơn...",
+                    step3: "Vế sau có dạng 'the better', suy ra vế đầu bắt buộc phải khởi sắc xuất phát bằng cụm cấu trúc 'The + so sánh hơn' của danh từ lượng từ số nhiều -> 'The more'.",
+                    step4: "Loại A, B, C do thiếu mạo từ 'the' cấu tạo cấu trúc."
+                }
+            },
+            {
+                id: 43,
+                question: "The humanitarian situation is _______ than what the international media is currently reporting to the public.",
+                options: [{key:"A",text:"more dire"},{key:"B",text:"the most dire"},{key:"C",text:"as dire as"},{key:"D",text:"direr"}],
+                correct: "A",
+                explanation: {
+                    step1: "Tình hình nhân đạo thảm khốc hơn những gì truyền thông quốc tế hiện đang báo cáo với công chúng.",
+                    step2: "Có từ 'than' báo hiệu cấu trúc so sánh hơn. 'Dire' (thảm khốc, khốc liệt) là tính từ ngắn đặc biệt.",
+                    step3: "Trong tiếng Anh hiện đại học thuật, dạng so sánh hơn của tính từ này được viết phổ biến rộng rãi dưới dạng 'more dire'.",
+                    step4: "Chọn phương án A."
+                }
+            },
+            {
+                id: 44,
+                question: "It is widely acknowledged by experts that this ancient civilization was _______ than any other society existing during the same historical period.",
+                options: [{key:"A",text:"more advanced"},{key:"B",text:"the most advanced"},{key:"C",text:"as advanced"},{key:"D",text:"much advanceder"}],
+                correct: "A",
+                explanation: {
+                    step1: "Các chuyên gia công nhận rộng rãi rằng nền văn minh cổ đại này tiên tiến hơn bất kỳ xã hội nào khác tồn tại trong cùng giai đoạn lịch sử.",
+                    step2: "Từ 'than' quy định cấu trúc so sánh hơn. 'Advanced' đóng vai trò là một tính từ dài kết thúc đuôi -ed.",
+                    step3: "Do đó hình thức so sánh hơn chuẩn xác của từ này là 'more advanced'.",
+                    step4: "Loại D sai hoàn toàn quy tắc ngữ pháp biến đổi hình thái từ."
+                }
+            },
+            {
+                id: 45,
+                question: "The latest model is _______ than its predecessor in every respect, particularly in terms of processing speed.",
+                options: [{key:"A",text:"more better"},{key:"B",text:"better"},{key:"C",text:"the best"},{key:"D",text:"as better"}],
+                correct: "B",
+                explanation: {
+                    step1: "Mẫu mới nhất tốt hơn mẫu tiền nhiệm của nó về mọi mặt, đặc biệt là về tốc độ xử lý.",
+                    step2: "Có từ 'than' yêu cầu cấu trúc so sánh hơn. Tính từ gốc 'good' chuyển sang so sánh hơn biến đổi bất quy tắc thành 'better'.",
+                    step3: "Bản thân 'better' đã tự mang nghĩa so sánh hơn, không đi kèm thêm từ 'more' phía trước nữa.",
+                    step4: "Loại A mắc lỗi trùng lặp từ thừa nghĩa. Loại C là so sánh nhất."
+                }
+            },
+            {
+                id: 46,
+                question: "The cultural heritage sites in this ancient city are ______ than those found in the modern neighboring provinces developed recently.",
+                options: [{key:"A",text:"far more ancient"},{key:"B",text:"ancienter"},{key:"C",text:"as ancient"},{key:"D",text:"the most ancient"}],
+                correct: "A",
+                explanation: {
+                    step1: "Các địa điểm di sản văn hóa ở thành phố cổ này cổ kính hơn nhiều so với các địa điểm được tìm thấy ở các tỉnh lân cận hiện đại được phát triển gần đây.",
+                    step2: "Từ nhận biết cấu trúc 'than' quy định so sánh hơn. 'Ancient' là tính từ dài 2 âm tiết.",
+                    step3: "Hình thức so sánh hơn là 'more ancient', có thể đi kèm trạng từ 'far' đứng trước để gia tăng mức độ nhấn mạnh chênh lệch thời gian thời đại.",
+                    step4: "Loại B sai quy tắc phân định tính từ."
+                }
+            },
+            {
+                id: 47,
+                question: "The ______ the legal framework regarding international trade becomes, the more difficult it is for small enterprises to compete globally.",
+                options: [{key:"A",text:"complexer"},{key:"B",text:"more complex"},{key:"C",text:"the more complex"},{key:"D",text:"most complex"}],
+                correct: "C",
+                explanation: {
+                    step1: "Khung pháp lý về thương mại quốc tế càng phức tạp, các doanh nghiệp nhỏ càng khó cạnh tranh toàn cầu.",
+                    step2: "Áp dụng cấu trúc mẫu câu so sánh kép: The + so sánh hơn..., the + so sánh hơn...",
+                    step3: "Vế thứ hai đã xuất hiện cụm 'the more difficult'. Vế đầu tiên với tính từ dài 'complex' bắt buộc phải có dạng thức cấu trúc song hành đồng dạng -> 'the more complex'.",
+                    step4: "Loại A sai quy tắc chia tính từ dài. Loại B thiếu mạo từ 'the'."
+                }
+            },
+            {
+                id: 48,
+                question: "The software is _______ than anything else currently available on the global cybersecurity market today.",
+                options: [{key:"A",text:"more advanced"},{key:"B",text:"the most advanced"},{key:"C",text:"as advanced as"},{key:"D",text:"advancer"}],
+                correct: "A",
+                explanation: {
+                    step1: "Phần mềm này tiên tiến hơn bất kỳ thứ gì khác hiện có trên thị trường an ninh mạng toàn cầu hiện nay.",
+                    step2: "Sự xuất hiện của liên từ 'than' là minh chứng rõ ràng cho cấu trúc so sánh hơn. 'Advanced' là tính từ dài.",
+                    step3: "Do đó, phương án đúng ngữ pháp duy nhất là 'more advanced'.",
+                    step4: "Loại B, C sai kiểu dạng so sánh. Loại D cấu tạo sai từ vựng."
+                }
+            },
+            {
+                id: 49,
+                question: "The consequences of the decision were _______ than anyone in the committee could have possibly anticipated.",
+                options: [{key:"A",text:"as far-reaching"},{key:"B",text:"the most far-reaching"},{key:"C",text:"more far-reaching"},{key:"D",text:"more far-reachinger"}],
+                correct: "C",
+                explanation: {
+                    step1: "Hậu quả của quyết định này sâu rộng hơn những gì bất kỳ ai trong ủy ban có thể lường trước được.",
+                    step2: "Từ 'than' quy định cấu trúc so sánh hơn. 'Far-reaching' (sâu rộng, có sức ảnh hưởng lớn) là tính từ ghép đóng vai trò như tính từ dài.",
+                    step3: "Cấu trúc so sánh hơn chuẩn mực tương ứng của từ này là 'more far-reaching'.",
+                    step4: "Loại D sai quy tắc cấu tạo hình thái từ."
+                }
+            },
+            {
+                id: 50,
+                question: "After several months of intensive renovation, the interior of the old manor now looks ______ and more luxurious than it originally did.",
+                options: [{key:"A",text:"grander"},{key:"B",text:"more grand"},{key:"C",text:"the grandest"},{key:"D",text:"as grand"}],
+                correct: "A",
+                explanation: {
+                    step1: "Sau vài tháng cải tạo chuyên sâu, nội thất của trang viên cũ giờ đây trông hoành tráng hơn và sang trọng hơn so với ban đầu.",
+                    step2: "Có từ nhận biết vế sau 'than' quy định so sánh hơn. Đồng thời, cấu trúc song hành nối bằng liên từ 'and' với cụm 'more luxurious' đòi hỏi vị trí trống cũng phải ở dạng so sánh hơn.",
+                    step3: "'Grand' là tính từ ngắn, hình thức so sánh hơn của nó là 'grander'.",
+                    step4: "Loại B sai quy tắc chia tính từ ngắn. Loại C, D sai bản chất loại hình so sánh câu."
+                }
+            }
+        ];
+
+        let userAnswers = {};
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        let audioCtx = null;
+
+        function initAudio() {
+            if (!audioCtx) audioCtx = new AudioCtx();
+        }
+
+        function playSound(type) {
+            try {
+                initAudio();
+                if (!audioCtx) return;
+                const now = audioCtx.currentTime;
+                if (type === 'correct') {
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(523.25, now);
+                    osc.frequency.setValueAtTime(659.25, now + 0.1);
+                    gain.gain.setValueAtTime(0.15, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.4);
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+                    osc.start(now);
+                    osc.stop(now + 0.4);
+                } else {
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    osc.type = 'sawtooth';
+                    osc.frequency.setValueAtTime(150, now);
+                    osc.frequency.linearRampToValueAtTime(100, now + 0.3);
+                    gain.gain.setValueAtTime(0.15, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.4);
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+                    osc.start(now);
+                    osc.stop(now + 0.4);
+                }
+            } catch(e) {}
+        }
+
+        const canvas = document.getElementById('confetti-canvas');
+        const ctx = canvas.getContext('2d');
+        let confettiParticles = [];
+        
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        function triggerConfetti() {
+            confettiParticles = [];
+            const colors = ['#6C5CE7', '#00CEC9', '#FF7675', '#FDCB6E', '#00D26A'];
+            for(let i=0; i<50; i++) {
+                confettiParticles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height - canvas.height,
+                    size: Math.random() * 6 + 4,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    speedX: Math.random() * 4 - 2,
+                    speedY: Math.random() * 4 + 4,
+                    rotation: Math.random() * 360,
+                    rotationSpeed: Math.random() * 4 - 2
+                });
+            }
+            animateConfetti();
+        }
+
+        function animateConfetti() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            let active = false;
+            confettiParticles.forEach(p => {
+                p.y += p.speedY;
+                p.x += p.speedX;
+                p.rotation += p.rotationSpeed;
+                if (p.y < canvas.height) active = true;
+                
+                ctx.save();
+                ctx.translate(p.x, p.y);
+                ctx.rotate(p.rotation * Math.PI / 180);
+                ctx.fillStyle = p.color;
+                ctx.fillRect(-p.size/2, -p.size/2, p.size, p.size);
+                ctx.restore();
+            });
+            if (active) requestAnimationFrame(animateConfetti);
+        }
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function renderQuiz() {
+            const container = document.getElementById('quiz-container');
+            container.innerHTML = "";
+
+            quizData.forEach((q, index) => {
+                const card = document.createElement('div');
+                card.className = "card";
+                card.id = `card-${q.id}`;
+
+                let html = `<div class="question-text"><strong>Câu ${index + 1}:</strong> ${q.question}</div>`;
+                
+                let shuffledOptions = [...q.options];
+                shuffleArray(shuffledOptions);
+
+                html += `<div class="options-container">`;
+                shuffledOptions.forEach(opt => {
+                    html += `
+                        <button class="option-btn" id="opt-${q.id}-${opt.key}" onclick="checkAnswer(${q.id}, '${opt.key}', '${q.correct}')">
+                            ${opt.key}. ${opt.text}
+                        </button>
+                    `;
+                });
+                html += `</div>`;
+
+                html += `
+                    <div class="explanation-box" id="explain-${q.id}">
+                        <div class="explanation-title">🌟 GIẢI THÍCH CHI TIẾT TỪ MS LÊ HẰNG:</div>
+                        <div class="explanation-step"><strong>Bước 1 - Dịch nghĩa câu:</strong> ${q.explanation.step1}</div>
+                        <div class="explanation-step"><strong>Bước 2 - Phân tích cấu trúc:</strong> ${q.explanation.step2}</div>
+                        <div class="explanation-step"><strong>Bước 3 - Tại sao đáp án này ĐÚNG:</strong> ${q.explanation.step3}</div>
+                        <div class="explanation-step"><strong>Bước 4 - Tại sao các đáp án khác SAI:</strong> ${q.explanation.step4}</div>
+                    </div>
+                `;
+
+                card.innerHTML = html;
+                container.appendChild(card);
+            });
+        }
+
+        function checkAnswer(questionId, selectedKey, correctKey) {
+            if (userAnswers[questionId] !== undefined) return;
+
+            userAnswers[questionId] = (selectedKey === correctKey);
+            const card = document.getElementById(`card-${questionId}`);
+            const selectedBtn = document.getElementById(`opt-${questionId}-${selectedKey}`);
+            const correctBtn = document.getElementById(`opt-${questionId}-${correctKey}`);
+
+            if (selectedKey === correctKey) {
+                if (selectedBtn) selectedBtn.classList.add('correct');
+                playSound('correct');
+                triggerConfetti();
+            } else {
+                if (selectedBtn) selectedBtn.classList.add('wrong');
+                if (correctBtn) correctBtn.classList.add('correct');
+                card.classList.add('shake-animation');
+                playSound('wrong');
+                setTimeout(() => { card.classList.remove('shake-animation'); }, 500);
+            }
+
+            document.getElementById(`explain-${questionId}`).style.display = "block";
+        }
+
+        function submitQuiz() {
+            let correctCount = 0;
+            const totalQuestions = quizData.length;
+
+            quizData.forEach(q => {
+                if (userAnswers[q.id] === true) correctCount++;
+            });
+
+            const scorePercentage = (correctCount / totalQuestions) * 100;
+            let comment = "";
+
+            if (scorePercentage < 50) {
+                comment = "Điểm số chưa đạt kỳ vọng rồi con ơi! Hãy chú ý rà soát kỹ quy tắc đặc biệt 'Of the two' và cấu trúc so sánh kép để làm lại nhé.";
+            } else if (scorePercentage >= 50 && scorePercentage <= 80) {
+                comment = "Kết quả rất tốt! Hãy ghi lại những từ biến đổi bất quy tắc nâng cao như 'superior' hay 'worse off' vào sổ tay con nhé.";
+            } else {
+                comment = "Trời ơi xuất sắc quá! Con đã xử lý mượt mà toàn bộ các bẫy so sánh nâng cao phân hóa của đề thi HSA rồi đó!";
+            }
+
+            document.getElementById('modal-score-text').innerText = `${correctCount} / ${totalQuestions}`;
+            document.getElementById('modal-comment-text').innerText = comment;
+            document.getElementById('result-modal').style.display = "flex";
+            
+            if (scorePercentage >= 60) triggerConfetti();
+        }
+
+        function closeModal() {
+            document.getElementById('result-modal').style.display = "none";
+        }
+
+        window.onload = renderQuiz;
+    </script>
+</body>
+</html>
